@@ -137,10 +137,7 @@ void updateRelayOutput() {
 }
 
 void displayCapacitorMode() {
-  // Keep first-digit input visible until another recognized digit arrives.
   if (firstDigit != -1) return;
-
-  // After the second digit, keep the completed input visible for 1 second.
   if (showInput) {
     if (millis() - messageTime < INPUT_DISPLAY_TIME) return;
     showInput = false;
